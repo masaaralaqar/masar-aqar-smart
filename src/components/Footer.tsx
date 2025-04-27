@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Whatsapp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -37,7 +39,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">تواصل معنا</h3>
             <p className="text-gray-300 mb-2">البريد الإلكتروني: info@masaralaqar.sa</p>
-            <p className="text-gray-300 mb-4">الهاتف: 966123456789+</p>
+            <div className="flex items-center text-gray-300 mb-2">
+              <Whatsapp className="ml-2" size={20} />
+              <span>+966547271676</span>
+            </div>
           </div>
         </div>
         
