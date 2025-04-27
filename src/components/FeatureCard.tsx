@@ -16,10 +16,17 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   className,
 }) => {
   return (
-    <div className={cn("feature-card flex flex-col items-center text-center", className)}>
-      <div className="mb-4 text-masar-primary">{icon}</div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-masar-gray">{description}</p>
+    <div 
+      className={cn(
+        "feature-card rounded-2xl p-8 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-masar-primary/10",
+        className
+      )}
+    >
+      <div className="mb-6 text-masar-primary transform transition-transform duration-300 hover:scale-110">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold mb-4 text-masar-dark">{title}</h3>
+      <p className="text-masar-gray text-lg leading-relaxed">{description}</p>
     </div>
   );
 };
