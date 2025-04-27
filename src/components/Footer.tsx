@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const whatsappNumber = '966547271676'; // Without the '+' sign for WhatsApp link
+
+  const openWhatsApp = () => {
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <footer className="bg-masar-dark text-white py-12">
       <div className="container-custom">
@@ -39,8 +45,18 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">تواصل معنا</h3>
             <p className="text-gray-300 mb-2">البريد الإلكتروني: info@masaralaqar.sa</p>
             <div className="flex items-center text-gray-300 mb-2">
-              <MessageCircle className="ml-2" size={20} />
-              <span>+966547271676</span>
+              <button 
+                onClick={openWhatsApp} 
+                className="flex items-center hover:text-green-500 transition-colors group"
+                aria-label="Open WhatsApp"
+              >
+                <MessageCircle 
+                  className="ml-2 group-hover:scale-110 transition-transform" 
+                  size={24} 
+                  strokeWidth={2} 
+                />
+                <span>+966547271676</span>
+              </button>
             </div>
           </div>
         </div>
