@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -37,7 +36,7 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="text-xl font-bold mb-4">تواصل معنا</h3>
-            <p className="text-gray-300 mb-2">البريد الإلكتروني: info@masaraqar.com</p>
+            <p className="text-gray-300 mb-2">البريد الإلكتروني: info@masaralaqar.sa</p>
             <p className="text-gray-300 mb-4">الهاتف: 966123456789+</p>
           </div>
         </div>
